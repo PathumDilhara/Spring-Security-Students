@@ -1,5 +1,7 @@
-package org.appvibessolution.spring_security.dto;
+package org.appvibessolution.spring_security.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
+@Entity
+public class Users {
+    @Id
     private int id;
     private String userName;
     private String password;

@@ -1,6 +1,6 @@
 package org.appvibessolution.spring_security.services;
 
-import org.appvibessolution.spring_security.model.User;
+import org.appvibessolution.spring_security.model.Users;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,11 +8,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-public class UserPrincipal implements UserDetails {
+public class UsersPrincipal implements UserDetails {
 
-    private final User user;
+    private final Users user;
 
-    public UserPrincipal(User user) {
+    public UsersPrincipal(Users user) {
         this.user = user;
     }
 

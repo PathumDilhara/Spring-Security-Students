@@ -67,7 +67,7 @@ public class SecurityConfig {
     // Custom hard coded configuration of user details service
     //    @Bean
     //    public UserDetailsService userDetailsService() {
-    //        UserDetails user1 = User
+    //        UserDetails user1 = User //  here user from security.core.userdetails.User;
     //                .withDefaultPasswordEncoder()
     //                .username("user1")
     //                .password("123")
