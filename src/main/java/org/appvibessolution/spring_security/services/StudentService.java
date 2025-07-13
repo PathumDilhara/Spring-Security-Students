@@ -1,6 +1,9 @@
-package org.appvibessolution.spring_security;
+package org.appvibessolution.spring_security.services;
 
 import jakarta.transaction.Transactional;
+import org.appvibessolution.spring_security.dto.StudentDTO;
+import org.appvibessolution.spring_security.model.Student;
+import org.appvibessolution.spring_security.repo.StudentRepo;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;

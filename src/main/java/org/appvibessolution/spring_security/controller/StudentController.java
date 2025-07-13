@@ -1,6 +1,8 @@
-package org.appvibessolution.spring_security;
+package org.appvibessolution.spring_security.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.appvibessolution.spring_security.dto.StudentDTO;
+import org.appvibessolution.spring_security.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;

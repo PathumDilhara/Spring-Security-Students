@@ -1,7 +1,5 @@
-package org.appvibessolution.spring_security;
+package org.appvibessolution.spring_security.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Student {
-    @Id
+public class StudentDTO {
     private Integer id;
     private String name;
     private Integer marks;
