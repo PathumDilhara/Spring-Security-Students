@@ -1,5 +1,6 @@
 package org.appvibessolution.spring_security.config;
 
+import org.appvibessolution.spring_security.services.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Autowired
-    public UserDetailsService userDetailsService;
+    public MyUserDetailsService myUserDetailsService;
 
     // This method configures the security filter chain for the application
     // Since build() throws Exception, your method must also declare throws Exception unless you:
@@ -89,7 +90,7 @@ public class SecurityConfig {
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
-        provider.setUserDetailsService(userDetailsService);
+        provider.setUserDetailsService(myUserDetailsService);
         return  provider;
     }
 }
