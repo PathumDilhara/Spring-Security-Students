@@ -8,4 +8,6 @@ public interface UsersRepo extends JpaRepository<Users, Integer> {
 
 //    @Query(value = "SELECT * FROM users WHERE user_name = ?1", nativeQuery = true)
     Users findByUserName(String userName);
+
+
 }
