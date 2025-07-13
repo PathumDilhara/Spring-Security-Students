@@ -19,4 +19,10 @@ public class UsersController {
         return usersService.createUser(usersDTO);
     }
 
+    @PostMapping("/login")
+    public String login(@RequestBody UsersDTO usersDTO) {
+        return  usersService.verifyUser(usersDTO);
+//        return "Login successful for user: " + usersDTO.getUserName();
+    }
+
 }
