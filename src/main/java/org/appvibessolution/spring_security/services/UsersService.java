@@ -41,8 +41,11 @@ public class UsersService {
     }
 
     public String verifyUser(UsersDTO usersDTO) {
+        System.out.println("************** : "+usersDTO.getUserName());
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 usersDTO.getUserName(), usersDTO.getPassword()));
+
+        System.out.println("########### : "+authentication.isAuthenticated());
 
         if(authentication.isAuthenticated()) {
 //            return "Success";
